@@ -1,4 +1,4 @@
-isoftgoal
+Overtime
 =========
 
-Ferramenta de Levantamento de Requisitos Não Funcionais.
+Ferramenta utilizada para Horas Extras.
