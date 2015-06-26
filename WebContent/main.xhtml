@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:rich="http://richfaces.org/rich"
+      xmlns:e="http://entities.br"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <body>
+        <ui:composition template="./template.xhtml">
+            <ui:define name="subheader">
+                <f:view locale="#{context.currentLocale}">
+                    <h:form>
+                        <rich:toolBar>
+                            <rich:dropDownMenu value="#{i18n['menu.label.main']}">
+                                <e:menuItems/>
+                            </rich:dropDownMenu>
+                        </rich:toolBar>
+                    </h:form>
+                </f:view>
+            </ui:define>
+
+            <ui:define name="sidebar">
+                <h:panelGroup>
+                    <ul>
+                        <li>
+                            <h2>#{i18n['menu.label.main']}</h2>
+                            <ul class="blocklist">
+                                <e:liMenuItems/>
+                            </ul>
+                        </li>
+                    </ul>
+                </h:panelGroup>
+            </ui:define>
+
+            <ui:define name="content">
+                <h:panelGroup rendered="#{empty autoEntityBackBean.entity}">
+                    <br/><br/>
+	                    <div class="post">
+	                    	<center>
+	                    		<h1 class="title">Bem Vindo ao</h1>
+	                    		<h:graphicImage url="img/logo.png"/>
+	                    		<div class="entry">
+									<p>Seu Sistema de Requisitos de Qualidade</p>
+	                    		</div>
+	                    	</center>
+	                    </div>
+                    <br/><br/>
+                </h:panelGroup>
+                <e:view />
+            </ui:define>
+
+        </ui:composition>
+    </body>
+</html>
