@@ -1,4 +1,4 @@
 Overtime
 =========
 
-Ferramenta utilizada Controle de Horas Extras.
+Ferramenta utilizada para Controle de Horas Extras.
